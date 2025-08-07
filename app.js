@@ -33,26 +33,12 @@ app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
 
 // Database connection
-mongoose.connect(process.env.MONGODB_URI);
-//const mongoose = require('mongoose');
-
-// const connectDB = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/vikey', {
-//       useNewUrlParser: true,
-//       useUnifiedTopology: true,
-//     });
-//     console.log('✅ MongoDB connected');
-//   } catch (err) {
-//     console.error('❌ MongoDB connection error:', err);
-//     process.exit(1); // stop the app
-//   }
-// };
-
-// connectDB();
-
-
-
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('✅ Connected to MongoDB Atlas'))
+.catch((err) => console.error('❌ MongoDB connection error:', err));
 
 
 // Set current path globally
@@ -63,8 +49,6 @@ app.use((req, res, next) => {
 
 
 
-
-// Now all views have access to settings via `settings` variable
 
 
 // Admin Middleware (layout + settings)
