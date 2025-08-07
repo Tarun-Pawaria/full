@@ -191,8 +191,8 @@ iframe {
 }
 
 .team-photo {
-  max-width: 400px;
-  max-height: 600px;
+  width: 250px;
+  height: 400px;
   border-radius: 8px;
   object-fit: cover;
  }
