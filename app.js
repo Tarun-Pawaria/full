@@ -138,7 +138,7 @@ app.use((err, req, res, next) => {
 
 
 // Start server
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App listening on port ${port}! http://localhost:${port}`);
 });
