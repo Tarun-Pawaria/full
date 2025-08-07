@@ -26,8 +26,11 @@ app.set("layout", "layout");
 
 
 
+
 // View engine
 app.set("view engine", "ejs");
+
+app.set('views', path.join(__dirname, 'views'));
 
 // Database connection
 mongoose.connect(process.env.MONGODB_URI);
