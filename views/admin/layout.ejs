@@ -46,7 +46,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
         <!-- Toggler for small screens -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -104,5 +104,28 @@
 <!-- /Footer -->
 </body>
 <script src="/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.navbar-toggler');
+    const collapseEl = document.getElementById('navbarNav');
+
+    // Make sure a Bootstrap Collapse instance exists
+    let bsCollapse = new bootstrap.Collapse(collapseEl, {
+      toggle: false
+    });
+
+    toggleBtn.addEventListener('click', function (e) {
+      e.preventDefault(); // prevent any interference
+      bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl); // get existing or create new
+
+      if (collapseEl.classList.contains('show')) {
+        bsCollapse.hide();
+      } else {
+        bsCollapse.show();
+      }
+    });
+  });
+</script>
+
 
 </html>
