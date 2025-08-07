@@ -1,0 +1,100 @@
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="container container1">
+      <h1 class="display-4">Contact Us</h1><br>
+      <p class="lead">Let’s power your next project. Reach out today.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info + Form -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Info -->
+        <div class="col-md-5">
+          <h2>Get in Touch</h2>
+          <p>We’re available Monday through Saturday for site visits, consultations, and emergency services.</p>
+          <ul class="list-unstyled">
+            <li><strong>📞 Phone:</strong> (123) 456-7890</li>
+            <li><strong>📧 Email:</strong> info@lightpoleelectric.com</li>
+            <li><strong>📍 Address:</strong> 123 Electric Ave, Brookhill, TX 75000</li>
+            <li><strong>🕒 Hours:</strong> Mon–Sat, 8AM – 6PM</li>
+          </ul>
+          <div class="mt-4">
+            <h5>Follow Us</h5>
+            <a href="#" class="me-2">Facebook</a> | 
+            <a href="#" class="me-2">LinkedIn</a> | 
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+   
+
+
+
+
+
+        <!-- Contact Form -->
+        <div class="col-md-7">
+          <h2>Send a Message</h2>
+          <div  id="success-message" class="alert alert-success" style="display:none;">
+            Thank you! Your message has been sent successfully.
+            </div>
+
+
+          <form action="/send" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="_replyto" required />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27943.27995810734!2d76.60111687566915!3d28.90102257474832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d855e8a97ddc1%3A0x63cd41882ddc0ce2!2sRohtak%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1751613892143!5m2!1sen!2sin"
+     width="600"
+      height="450"
+      style="border:0;"
+       allowfullscreen=""
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+  
+</div>
+
+  </section>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    document.getElementById('success-message').style.display = 'block';
+  }
+</script>
+<style>
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+</style>
+
+ 

@@ -1,0 +1,86 @@
+<!-- Hero Section -->
+  <section class="hero">
+  <div class="container text-center text-white">
+    <h1>Powering Cities, Lighting Streets</h1>
+    <p>Expert Light Pole Wiring & Commercial Electrical Services</p>
+    <a href="/contact" class="btn btn-primary btn-lg mt-3">Request a Quote</a>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2><%-trust.trust_title%></h2>
+      <p><%- trust.trust_Description || '' %></p>
+      <!-- <a href="#" class="btn btn-outline-primary">Learn More</a> -->
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Services</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="services-icon mb-2">💡</div>
+          <h5>Light Pole Wiring</h5>
+          <p>Design and installation for roads, parking lots, and public areas.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="services-icon mb-2">🔌</div>
+          <h5>Underground Cabling</h5>
+          <p>Safe and compliant electrical trenching and underground work.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="services-icon mb-2">🛠️</div>
+          <h5>Emergency Repairs</h5>
+          <p>Rapid-response repair teams available 24/7 for outages and faults.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-5">
+    <div class="container">
+      <u><h1 class="text-center mb-4">Recent Projects</h1></u>
+      <% if (recentProjects.length === 0) { %>
+  <h3 style="text-align: center;">Add some recent projects.</h3>
+<% } %>
+
+   <div class="row g-4 <%= recentProjects.length === 1 ? 'single-project-row d-flex' : '' %>">
+  <% recentProjects.forEach(project => { %>
+    <div class="col-md-4 col-lg-4">
+      <div class="project-card card h-100">
+        <img src="/uploads/<%= project.project_image %>" alt="<%= project.Project_title %>" class="img-fluid project-img card-img-top">
+        <h5 class="mt-2 text-center"><%= project.Project_title %></h5>
+        <p class="text-center"><%= project.project_description %></p>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-light py-5 text-center">
+    <div class="container">
+      <h2><%-bottom.bottom_title%></h2>
+      <blockquote class="blockquote">
+        <p class="mb-0"><%-bottom.bottom_Description%></p>
+        <!-- <footer class="blockquote-footer mt-2">City of Brookhill Electrical Dept.</footer> -->
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Need a Reliable Electrical Partner?</h2>
+      <p class="lead">From design to installation — we light the way.</p>
+      <a href="/contact" class="btn btn-light">Schedule a Free Consultation</a>
+    </div>
+  </section>

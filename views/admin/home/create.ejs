@@ -1,0 +1,36 @@
+<div id="admin-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="admin-heading"><i class="fa fa-cog"></i> Recent Projects</h1>
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <h5 class="card-header">Recent Projects</h5>
+                    <div class="card-body">
+                        <form action="/admin/add-recent-Project" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="Project-title" class="form-label">Project Title</label>
+                                <input type="text" name="Project_title" class="form-control" autocomplete="off"
+                                    required="">                                   
+                            </div>
+                            <div class="mb-3">
+                                <label for="project_image" class="form-label">Upload Project Image</label>
+                                <br>                              
+                                <input type="file" name="project_image" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="project_description" class="form-label">Project Description</label>                                
+                                <input type="text" name="project_description" class="form-control" autocomplete="off"
+                                    required="">                                     
+                            </div>
+
+                            <input type="submit" name="submit" class="btn btn-primary" value="Save" required="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

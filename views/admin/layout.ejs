@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ADMIN Panel</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" href="/css/adminstyle.css">
+
+     <%- typeof tabulatorCSS == 'undefined'? '' :tabulatorCSS %>
+    <%- typeof summernoteCSS == 'undefined'? '' :summernoteCSS %>
+
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-admin">
+      <!-- container -->
+      <div class="container">
+          <!-- row -->
+          <div class="row">
+            <!-- LOGO -->
+            <div class="col-md-2 me-auto">
+               <a href="/admin/Home"><img class="logo" src="/uploads/<%=settings1.website_logo%>" style="width: 80px;height: 50px ;" alt="Logo"></a>
+            </div>
+            <div class="col-md-2 me-auto"><h1 style="color: aliceblue;">  <%=settings1.website_title%></h1></div>
+            <!-- /LOGO -->
+            <!-- LOG-Out -->
+            <div class="col-md-2">
+                <a href="/admin/logout" class="admin-logout">
+                  <i class="fa fa-sign-out"></i> logout
+                </a>
+            </div>
+            <!-- /LOG-Out -->
+          </div>
+      </div>
+    </div>
+    <!-- /HEADER -->
+    <!-- Menu Bar -->
+    <div id="admin-menubar" >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+        <!-- Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+      
+        
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-3"> 
+              <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/Home' ? 'active' : '' %>" href="/admin/Home">Home</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/trust' ? 'active' : '' %>" href="/admin/trust">Home Top</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/bottom' ? 'active' : '' %>" href="/admin/bottom">Home Bottom</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/about' ? 'active' : '' %>" href="/admin/about">About</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/weare' ? 'active' : '' %>" href="/admin/weare">About Top</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/certificate' ? 'active' : '' %>" href="/admin/certificate">About Bottom</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/settings' ? 'active' : '' %>" href="/admin/settings">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= currentPath === '/admin/users' ? 'active' : '' %>" href="/admin/users">Users</a>
+        </li>
+       
+       
+        
+            </ul>
+          </div>
+       
+      </div>
+      </nav>
+    </div>
+    <!-- /Menu Bar -->
+
+  <%- body %>
+<!-- Footer -->
+<div id ="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span><%=settings1.footer_description%></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Footer -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<section class="projects-hero mb-5">
+  <div class="container">
+    <h1 class="display-4">Our Projects</h1>
+    <p class="lead">Lighting up communities one pole at a time.</p>
+  </div>
+</section>
+
+<section class="about-projects mt-5">
+  <div class="container">
+    <% if (recentProjects.length === 0) { %>
+      <h3 style="text-align: center;">Add some recent projects.</h3>
+    <% } %>
+
+<div class="row g-4 <%= recentProjects.length === 1 ? 'single-project-row d-flex' : '' %>">
+  <% recentProjects.forEach(project => { %>
+    <div class="col-md-4 col-lg-4">
+      <div class="project-card card h-100">
+        <img src="/uploads/<%= project.project_image %>" alt="<%= project.Project_title %>" class="img-fluid project-img card-img-top">
+        <h5 class="mt-2 text-center"><%= project.Project_title %></h5>
+        <p class="text-center"><%= project.project_description %></p>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+  <!-- CTA -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2>Have a Project in Mind?</h2>
+      <p class="lead">We’d love to power your next lighting or electrical installation. Let’s talk!</p>
+      <a href="/contact" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
+  </section>

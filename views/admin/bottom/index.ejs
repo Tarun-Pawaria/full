@@ -1,0 +1,47 @@
+<div id="admin-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="admin-heading"><i class="fa fa-cog"></i> Home Page Bottom Description</h1>
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <h5 class="card-header"> Home Page Bottom Description</h5>
+                    <div class="card-body">
+                        <form action="/admin/bottom" method="POST">
+                             <div class="mb-3">
+                                <label for="bottom_title" class="form-label">Title</label>      
+                                  <input type="text" name="bottom_title" value="<%= bottom?.bottom_title || '' %>" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="bottom_Description" class="form-label">Description</label>
+                                <textarea name="bottom_Description" id="summernote" class="form-control" rows="5"
+                                    required><%= bottom?.bottom_Description || '' %></textarea>
+                            </div>
+                        
+                            <input type="submit" class="btn btn-primary" value="Save">
+                        </form>
+                        
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#summernote').summernote({
+      placeholder: 'Start typing...',
+      tabsize: 2,
+      height: 200
+    });
+  });
+</script>
+
+<%- contentFor('summernoteCSS') %>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">

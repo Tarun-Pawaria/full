@@ -1,0 +1,36 @@
+<div id="admin-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="admin-heading"><i class="fa fa-cog"></i> Team Members</h1>
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <h5 class="card-header">Team Members</h5>
+                    <div class="card-body">
+                        <form action="/admin/add-team" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="Project-title" class="form-label">Name</label>
+                                <input type="text" name="Membar_Name" class="form-control" autocomplete="off"
+                                    required="">                                   
+                            </div>
+                            <div class="mb-3">
+                                <label for="project_image" class="form-label">Upload Member Image</label>
+                                <br>                              
+                                <input type="file" name="Membar_image" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="project_description" class="form-label">Post</label>                                
+                                <input type="text" name="Membar_post" class="form-control" autocomplete="off"
+                                    required="">                                     
+                            </div>
+
+                            <input type="submit" name="submit" class="btn btn-primary" value="Save" required="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

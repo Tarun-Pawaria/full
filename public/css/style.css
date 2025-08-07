@@ -1,0 +1,231 @@
+/* home page */
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.services-icon {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+.cta {
+  background-color: #0d6efd;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.hero {
+  background: url('../images/project6.JPG') no-repeat center center;
+  background-size: cover;
+  padding: 120px 0;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark overlay for readability */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/*service page  */
+.services-hero {
+  background: url('../images/background.JPG') center center/cover no-repeat;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-box {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.cta {
+  background-color: #0d6efd;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* project page */
+
+.projects-hero {
+  background-image: url('../images/streat.JPG');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Makes image cover the entire area */
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  min-height: 300px;
+  /* Optional: ensures enough height */
+}
+
+/* Optional: add a semi-transparent overlay for better text contrast */
+.projects-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+.projects-hero>.container {
+  position: relative;
+  z-index: 1;
+  /* Ensures text stays above the overlay */
+}
+
+.project-card {
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+
+}
+
+/* contact page */
+
+
+.contact-hero {
+  background: url('../images/contactus1.JPG') center center/cover no-repeat;
+  padding: 100px 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  height: auto;
+}
+.container1 {
+  background-color: rgba(255, 255, 255, 0.3); /* White, 30% opaque */
+  padding: 2rem;
+  border-radius: 12px;
+  font-size: large;
+  font-weight: bolder;
+  color: #fff; /* Make sure text is readable */
+}
+
+
+
+.form-control,
+.btn {
+  border-radius: 6px;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* about page */
+
+
+.about-hero {
+  background: url('../images/aboutus.jpg') center center / cover no-repeat;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent overlay for readability */
+  z-index: 0;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.team-photo {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+/*footer*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* This fills the remaining space */
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 15px 0;
+  text-align: center;
+}
+.project-card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .single-project-row {
+    justify-content: center;
+  }

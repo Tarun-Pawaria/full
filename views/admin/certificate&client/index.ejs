@@ -1,0 +1,48 @@
+<div id="admin-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="admin-heading"><i class="fa fa-cog"></i> Certificate</h1>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <h5 class="card-header">Certificate</h5>
+          <div class="card-body"> 
+            <form action="/admin/certificate" method="POST">
+              <div class="mb-3">
+                <label for="certificate_title" class="form-label">Title</label>      
+                <input type="text" name="certificate_title" value="<%= certificates?.certificate_title || '' %>" class="form-control" >
+              </div>
+
+              <div class="mb-3">
+                <label for="certificate" class="form-label">Certificate Description</label>
+                <textarea name="certificate" id="summernote" class="form-control" rows="5" required>
+<%- certificates?.certificate || '' %>
+                </textarea>
+              </div>
+          
+              <input type="submit" class="btn btn-primary" value="Save">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Summernote & jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#summernote').summernote({
+      placeholder: 'Start typing...',
+      tabsize: 2,
+      height: 200
+    });
+  });
+</script>
+
+<%- contentFor('summernoteCSS') %>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">

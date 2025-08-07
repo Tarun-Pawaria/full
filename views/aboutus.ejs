@@ -1,0 +1,60 @@
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="container">
+    <h1 class="display-4">About Us</h1>
+    <p class="lead">Lighting the way with quality, safety, and precision since 2009.</p>
+  </div>
+</section>
+
+<!-- Company Overview -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title">Who We Are</h2>
+    <%- aboutweare.Description || '' %>
+  </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h4>⚡ Quality</h4>
+        <p>We use certified materials, modern tools, and skilled technicians for every job.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>🛡️ Safety</h4>
+        <p>All our work complies with national electrical safety standards and local codes.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>🤝 Reliability</h4>
+        <p>On time. On budget. We stand by our word and our work — every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Our Team -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Meet the Team</h2>
+    <div class="row justify-content-center">
+      <% aboutMembers.forEach(function(member) { %>
+        <div class="col-md-4 text-center mb-4">
+          <img src="/uploads/<%= member.Membar_image %>" alt="<%= member.Membar_Name %>" class="img-fluid rounded-circle mb-2" />
+          <h5><%= member.Membar_Name %></h5>
+          <p class="text-muted"><%= member.Membar_post %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications & Clients -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="section-title"><%- aboutcertificate.certificate_title || '' %></h2>
+   <p><%- aboutcertificate.certificate || '' %></p> 
+  </div>
+</section>
